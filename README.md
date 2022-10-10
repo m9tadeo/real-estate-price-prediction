@@ -10,7 +10,7 @@ After Stage 1, I have written up all the functions needed to extract the propert
 
 ## INSTALLATION
 
-This project requires Python installation in a notebook of your choice. I recommend creating and activating a virtual environment.
+This project can be accessed in a Python editor of your choice. I use `VSCode`. I recommend creating and activating a `virtual environment`.
 
 ## USAGE
 
