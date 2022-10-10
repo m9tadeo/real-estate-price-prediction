@@ -23,4 +23,4 @@ Marlon Tadeo
 ## TIMELINE
 
 Project started 4 October 2022
-\nStage 1 ended 10 October 2022
+> Stage 1 ended 10 October 2022
