@@ -6,7 +6,7 @@ This project aims to create a Machine Learning model to make price predictions o
 
 Task # 1 is to build a dataset gathering information about at least 10,000 properties all over Belgium.
 
-After Stage 1, I have written up all the functions needed to extract the property information. However, I am only able to extract 229 locations because my `get-page-links` function can only extract the page links for page 1, 2, and 333 (last page) of *Apartment* pages and *House* pages respectively (6 pages total). I would still need to refine this function to extract all the page links between page 3 and page 332 (inclusive). Another possibility is to extract only about 150 pages from *Apartment* and 150 pages from *House* to get to 10,000 properties.
+After Stage 1, I have written up all the functions needed to extract the property information. However, I am only able to extract 760 locations because my `get-page-links` function can only extract the page links for the first 10 pages of *Apartment* pages and *House* pages respectively (20 pages total). I would still need to refine this function to extract all the page links. Another possibility is to extract only about 150 pages from *Apartment* and 150 pages from *House* to get to 10,000 properties.
 
 ## INSTALLATION
 
