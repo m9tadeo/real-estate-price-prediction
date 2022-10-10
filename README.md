@@ -12,6 +12,8 @@ The resulting data is also very raw and still needs a lot *scrubbing* such as mi
 
 Task # 2 is to take dataset from Task # 1, clean it, analyze it, and interpret it.
 
+At the beginning of Task # 2, I re-ran `scraper` from Task # 1 to read 60 pages each from *Apartment* and *House* (120 pages total) and extracted 4,560 properties raw data.
+
 ## INSTALLATION
 
 This project can be accessed in a Python editor of your choice. I use `VSCode`. I recommend creating and activating a `virtual environment`.
