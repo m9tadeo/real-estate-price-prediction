@@ -16,9 +16,17 @@ At the beginning of Task # 2, I re-ran `scraper` from Task # 1 to read 60 pages 
 
 After *scrubbing* data, I removed duplicate entries and rows with no address information. I ended up with a working dataset of 3,585 rows and 99 columns.
 
-For interpretation and analysis, I produced three graphic visualizations. `fig_1.png` is a graph on the number of properties for sale in Belgium.
+For interpretation and analysis, I produced three graphic visualizations. `fig_1.png` is a graph on the number of properties for sale in Belgium by province.
 
 ![alt text](https://github.com/m9tadeo/real-estate-price-prediction/blob/main/data_analysis/fig_1.png)
+
+`fig_2.png` is a graph on the median property price per province.
+
+![alt text](https://github.com/m9tadeo/real-estate-price-prediction/blob/main/data_analysis/fig_2.png)
+
+`fig_3.png` is a graph on the average property price by energy class.
+
+![alt text](https://github.com/m9tadeo/real-estate-price-prediction/blob/main/data_analysis/fig_3.png)
 
 ## INSTALLATION
 
