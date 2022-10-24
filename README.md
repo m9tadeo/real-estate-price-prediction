@@ -48,8 +48,8 @@ Project started 4 October 2022
 > Task # 1 started 4 October 2022  
 > Task # 1 ended 10 October 2022  
 > Task # 2 started 10 October 2022  
-> Task # 2 ended 18 October 2022
-> Task # 3 started 24 October 2022
+> Task # 2 ended 18 October 2022  
+> Task # 3 started 24 October 2022  
 
 ## PERSONAL SITUATION
 I am currently a Junior Data Scientist at BeCode Ghent
