@@ -28,6 +28,8 @@ At the end of alloted duration for Task # 2, I produced three graphic visualizat
 
 ![alt text](https://github.com/m9tadeo/real-estate-price-prediction/blob/main/data_analysis/fig_3.png)
 
+Task # 3 is to create a Machine Learning model to predict prices on Belgium's real estate sales.
+
 ## INSTALLATION
 
 This project can be accessed in a Python editor of your choice. I use `VSCode`. I recommend creating and activating a `virtual environment`.
@@ -47,6 +49,7 @@ Project started 4 October 2022
 > Task # 1 ended 10 October 2022  
 > Task # 2 started 10 October 2022  
 > Task # 2 ended 18 October 2022
+> Task # 3 started 24 October 2022
 
 ## PERSONAL SITUATION
 I am currently a Junior Data Scientist at BeCode Ghent
