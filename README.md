@@ -14,7 +14,7 @@ Task # 2 is to take dataset from Task # 1, clean it, interpret it, and analyze i
 
 At the beginning of Task # 2, I re-ran `scraper` from Task # 1 to read 60 pages each from *Apartment* and *House* (120 pages total) and extracted 4,560 properties raw data.
 
-After *scrubbing* data, I removed duplicate entries and rows with no address information. I ended up with a working dataset of 3,585 rows and 99 columns. The *scrubbing* was rough and I could have done a better job by employing functions instead of repeating codes. I only realized this when I was nearly done with the *scrubbing*. (*Insert `facepalm` here*)
+After *scrubbing* data, I removed duplicate entries and rows with no address information. I ended up with a working dataset of 3,585 rows and 99 columns. The *scrubbing* was rough and I could have done a better job by employing functions instead of repeating codes. I only realized this when I was nearly done with the *scrubbing*. (*Insert* `facepalm` *here*)
 
 At the end of alloted duration for Task # 2, I produced three graphic visualizations (located in `data_analysis_2` file). `fig_1.png` is a graph on the number of properties for sale in Belgium by province.
 
@@ -32,7 +32,7 @@ Task # 3 is to create a Machine Learning model to predict prices on Belgium's re
 
 After evaluating the data for what can be used for model training, I ended up with a working dataset of 991 rows and 20 columns. 
 
-1 column is the target ('y'). I considered 5 columns as categorical data and the rest are either continuous or ranked data. 
+1 column is the target feature (`y`). I considered 5 columns as categorical data and the rest are numerical data. 
 
 ## INSTALLATION
 
@@ -40,7 +40,7 @@ This project can be accessed in a Python editor of your choice. I use `VSCode`. 
 
 ## USAGE
 
-TBA
+This project may be viewed by anyone who wants to follow along in the training process of data engineering, data analysis, and machine learning.
 
 ## CONTRIBUTORS
 
