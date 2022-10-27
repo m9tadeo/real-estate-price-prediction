@@ -34,7 +34,7 @@ After evaluating the data for what can be used for model training, I ended up wi
 
 1 column is the target feature (`y`). I considered 5 columns as categorical data and the rest are numerical data. 
 
-After and cleaning and preprocessing the data, I tested 6 different regression models on my data with varying results. See `data_analysis_2` notebook.
+After cleaning and preprocessing the data, I tested 6 different regression models on my data with varying results. See `model_training_2` notebook.
 
 ## INSTALLATION
 
