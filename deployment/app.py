@@ -2,67 +2,51 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 import json
+import sys
+import pandas as pd
+
+from preprocessing import cleaning_data
+from predict import prediction
 
 app = Flask(__name__)
 
-@app.route('/GET')
+@app.route('/', methods=['GET'])
 def get_method():
-    return "This is a route that handles GET request"
+    return "It's alive!"
 
-@app.route('/POST', methods=['GET', 'POST'])
-def post_method():
-    return "This is a route that handles POST request"
-
-@app.route('/<int:number>/')
-def multiply(number):
-    return "The number " + str(number) + " multiplied by 2 is " + str(number*2)
-
-@app.route('/query')
-def by_query():
-    salary = request.args.get('salary')
-    bonus = request.args.get('bonus')
-    taxes = request.args.get('taxes')
-    result = (int(salary)) + (int(bonus)) - (int(taxes))
-    return f'"result": {result}'
-
-@app.route('/form', methods=['GET', 'POST'])
-def by_form():
-    # handle the POST request
+@app.route('/predict', methods=['GET', 'POST'])
+def predict_method():
+    #handle the POST request
     if request.method == 'POST':
-        salary = request.form.get('salary')
-        bonus = request.form.get('bonus')
-        taxes = request.form.get('taxes')
-        result = (int(salary)) + (int(bonus)) - (int(taxes))
-        return f'"result": {result}'
-    # otherwise handle the GET request
-    return '''
-              <form method="POST">
-                  <div><label>Salary: <input type="text" name="salary"></label></div>
-                  <div><label>Bonus: <input type="text" name="bonus"></label></div>
-                  <div><label>Taxes: <input type="text" name="taxes"></label></div>
-                  <input type="submit" value="Submit">
-              </form>'''
-
-@app.route('/json', methods=['POST'])
-def by_json():
-    return_data = {}
-    decoded = request.data.decode()
-    request_data = json.loads(decoded)
-    if type(request_data['salary']) == str or type(request_data['bonus']) == str or type(request_data['taxes']) == str:
-        return_data['error'] = 'expected numbers, got strings.'
-    elif request_data['salary'] == None:
-        return_data['error'] = '3 fields expected (salary, bonus, taxes). You forgot: salary'
-    elif request_data['bonus'] == None:
-        return_data['error'] = '3 fields expected (salary, bonus, taxes). You forgot: bonus'
-    elif request_data['taxes'] == None:
-        return_data['error'] = '3 fields expected (salary, bonus, taxes). You forgot: taxes'    
-    else:
-        salary = request_data['salary']
-        bonus = request_data['bonus']
-        taxes = request_data['taxes']
-        result = salary + bonus - taxes
-        return_data['result'] = result
-    return return_data
+        data = request.form
+        #input_data = json.loads(data)
+        #df_input_values = cleaning_data.preprocess(input_data)
+        #output_data = prediction.predict(df_input_values)
+        return data
+    #otherwise handle the GET request
+    return '''Please submit data of apartment / house. See the following format: 
+                {
+                "data": {
+                    "area": int,
+                    "property-type": "APARTMENT" | "HOUSE",
+                    "rooms-number": int,
+                    "zip-code": int,
+                    "land-area": Optional[int],
+                    "garden": Optional[bool],
+                    "garden-area": Optional[int],
+                    "equipped-kitchen": Optional[bool],
+                    "full-address": Optional[str],
+                    "swimming-pool": Optional[bool],
+                    "furnished": Optional[bool],
+                    "open-fire": Optional[bool],
+                    "terrace": Optional[bool],
+                    "terrace-area": Optional[int],
+                    "facades-number": Optional[int],
+                    "building-state": Optional[
+                        "NEW" | "GOOD" | "TO RENOVATE" | "JUST RENOVATED" | "TO REBUILD"
+                    ]
+                }
+            }'''
 
 if __name__ == '__main__':
     app.run(debug=True, port=105)
