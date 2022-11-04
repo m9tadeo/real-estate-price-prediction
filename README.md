@@ -72,7 +72,8 @@ This project is part of a bootcamp training in Python and Data Science. While I 
 
 ## TIMELINE
 
-Project started 4 October 2022  
+Project started 4 October 2022
+
 > Task # 1 started 4 October 2022  
 > Task # 1 ended 10 October 2022  
 > Task # 2 started 10 October 2022  
@@ -80,7 +81,8 @@ Project started 4 October 2022
 > Task # 3 started 24 October 2022  
 > Task # 3 ended 27 October 2022  
 > Task # 4 started 31 October 2022  
-> Task # 4 ended 4 November 2022  
+> Task # 4 ended 4 November 2022
+
 Project ended 4 November 2022
 
 ## PERSONAL SITUATION
