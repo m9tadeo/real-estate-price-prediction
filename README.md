@@ -8,6 +8,8 @@
 
 I built a `data_acquisition` notebook in `data_acquistion` folder to set about doing this.
 
+I started by building a function to get the page links (page URLs) I would need through accessing the homepage (root URL). Then, I pass on the page URLs to a function that will extract the property links (property URLs) from each page. From there, I pass on the property URLs to a function the will extract each property's information and save it in a dictionary. This dictionary is then stored into a `pandas` dataframe and saved to a `csv` file.
+
 At the end of alloted duration for Task # 1, I have written up all the functions needed to extract the property information. However, I am only able to extract 1,140 properties in a `csv` file because my `get-page-links` function can only extract the page links for the first 15 pages of *Apartment* pages and *House* pages respectively (30 pages total). I would still need to refine this function to extract all the page links. Another possibility is to extract only about the first 135 pages from *Apartment* and the first 135 pages from *House* to get to around 10,000 properties.
 
 The resulting data is also very raw and still needs a lot of *scrubbing*. There are also a lot of mismatched data (as in data that are not in the right columns (insert *sadface* here)).
