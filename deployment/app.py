@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request
 from flask import jsonify
+import joblib
 import json
 import sys
 import pandas as pd
@@ -19,10 +20,12 @@ def predict_method():
     #handle the POST request
     if request.method == 'POST':
         data = request.form
-        #input_data = json.loads(data)
-        #df_input_values = cleaning_data.preprocess(input_data)
-        #output_data = prediction.predict(df_input_values)
-        return data
+        #return data
+        preprocess_output = cleaning_data.preprocess(data)
+        if type(preprocess_output) is dict:
+            return preprocess_output
+        output_data = prediction.predict(preprocess_output)
+        return output_data
     #otherwise handle the GET request
     return '''Please submit data of apartment / house. See the following format: 
                 {
